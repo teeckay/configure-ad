@@ -103,153 +103,110 @@ Now the ping is receiving requests as ICMPv4 traffic is flowing and shows connec
 
 <p>
   
-Decription here
+Next, install Active Directory in the Domain Controller ( DC-1).
 
 </p>
 <br />
 
 <p>
   
-image here
+![image](https://github.com/teeckay/configure-ad/assets/64244011/6a1efec5-dce4-4269-9c84-3de09ba02021)
+
 
 </p>
+
+<h2>Step 4: Create Users in Active Directory.</h2>
+
 <p>
   
-Decription here
+Next, I create two organizational units called Admins and Employees.
 
 </p>
 <br />
 
 <p>
   
-image here
+![image](https://github.com/teeckay/configure-ad/assets/64244011/f8ef0d1b-3d63-44c5-a023-ceda5b444468)
+
 
 </p>
 <p>
   
-Decription here
+Next, I create an Admin employee called Charity Helen and also add her to the Domain Admins member group.
+</p>
+<br />
+
+<p>
+  
+![image](https://github.com/teeckay/configure-ad/assets/64244011/25b4d64f-8275-4897-a4fb-4494a4b33c97)
+
+</p>
+<p>
+  
+I then log into the domain controller with the new user, Charity Hellen ( Charity_Admin)
+</p>
+<br />
+
+<p>
+  
+![image](https://github.com/teeckay/configure-ad/assets/64244011/7a829ab6-9c73-4441-ae32-641ebfc1075f)
+
+</p>
+<p>
+  
+Next, I change the client virtual machine’s ( Client-1’s) DNS server to the Domain Controller’s private IP address. This is important as to have a single point of authority for both user authentication and name resolution, making it easier to manage and troubleshoot DNS-related issues.
+</p>
+<br />
+
+<p>
+  
+![image](https://github.com/teeckay/configure-ad/assets/64244011/008d80ca-7011-4c45-bbe9-564001b130ca)
+
+</p>
+
+<h2>Step 5: Join the client machine to the Domain.</h2>
+
+<p>
+  
+I then join the client ( Client-1 )  to the domain controller domain ( tiudydomain.com ) on the DC-1 virtual machine.
+
+</p>
+<br />
+
+<p>
+
+ ![image](https://github.com/teeckay/configure-ad/assets/64244011/bccbc7c4-5313-45af-a023-50dbd7d9c559)
+
+![image](https://github.com/teeckay/configure-ad/assets/64244011/a7bfe430-d03c-4399-b49b-bd5b339a5913)
+
+
+</p>
+
+<h2>Step 6: Setup Remote Desktop for users on the Client Machine.</h2>
+
+<p>
+  
+Next, I allow all domain users to be able to connect remotely to the client machine.
 
 </p>
 <br />
 
 <p>
   
-image here
+![image](https://github.com/teeckay/configure-ad/assets/64244011/f8476bdc-2c02-4b72-930e-9f385b33c7bd)
 
 </p>
-<p>
-  
-Decription here
 
+<h2>Step 7: Create users in the Domain Controller and Use them to log into the domain from the client machine.</h2>
+
+<p>
+Finally, I add an employee to the employee folder in the tiudydomain.com domain in the domain controller virtual machine. I then sign out of the client machine and use the new user,  Deon Cool to sign in to the domain from the client machine.
 </p>
 <br />
 
 <p>
   
-image here
+![image](https://github.com/teeckay/configure-ad/assets/64244011/8abf10e9-f1db-48a2-8ab9-d79579615ff5)
 
-</p>
-<p>
-  
-Decription here
-
-</p>
-<br />
-
-<p>
-  
-image here
-
-</p>
-<p>
-  
-Decription here
-
-</p>
-<br />
-
-<p>
-  
-image here
-
-</p>
-<p>
-  
-Decription here
-
-</p>
-<br />
-
-<p>
-  
-image here
-
-</p>
-<p>
-  
-Decription here
-
-</p>
-<br />
-
-<p>
-  
-image here
-
-</p>
-<p>
-  
-Decription here
-
-</p>
-<br />
-
-<p>
-  
-image here
-
-</p>
-<p>
-  
-Decription here
-
-</p>
-<br />
-
-<p>
-  
-image here
-
-</p>
-<p>
-  
-Decription here
-
-</p>
-<br />
-
-<p>
-  
-image here
-
-</p>
-<p>
-  
-Decription here
-
-</p>
-<br />
-
-<p>
-  
-image here
-
-</p>
-<p>
-  
-Decription here
-
-</p>
-<br />
-
+![image](https://github.com/teeckay/configure-ad/assets/64244011/ee541499-3aa0-4cef-894c-0ee346ecf0d1)
 
