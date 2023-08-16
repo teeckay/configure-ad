@@ -210,3 +210,7 @@ Finally, I add an employee to the employee folder in the tiudydomain.com domain 
 
 ![image](https://github.com/teeckay/configure-ad/assets/64244011/ee541499-3aa0-4cef-894c-0ee346ecf0d1)
 
+<p>
+This shows how important it is to have Active Directory services utilized and how to install and manage them. It is vital as an enterprise IT environment can have centralized identity and access management, authentication, and directory services.
+</p>
+<br />
